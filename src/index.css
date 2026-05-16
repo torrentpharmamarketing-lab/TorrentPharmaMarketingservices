@@ -14,6 +14,7 @@
   --color-text: #F8FAFC;
   --color-muted: #94A3B8;
   --color-white: #FFFFFF;
+  --color-foreground: #F8FAFC;
 
   @keyframes spin-slow {
     from { transform: translate(-50%, -50%) rotate(0deg); }

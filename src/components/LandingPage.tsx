@@ -73,7 +73,7 @@ const Services = () => {
       title: "Franchise Lead Gen",
       desc: "Hum aapke liye serious distributors aur franchisers dhoondtay hain jo invest karne ke liye tayyar hon.",
       icon: <Users className="w-8 h-8" />,
-      color: "bg-navy/10 text-navy"
+      color: "bg-cyan/10 text-cyan"
     },
     {
       title: "Territory Marketing",
@@ -85,7 +85,7 @@ const Services = () => {
       title: "WhatsApp Conversion",
       desc: "Sirf leads nahi, sales. Hum aapka WhatsApp system set up karte hain taake har query customer mein badle.",
       icon: <MessageCircle className="w-8 h-8" />,
-      color: "bg-navy/10 text-navy"
+      color: "bg-orange/10 text-orange"
     },
     {
       title: "Expansion Strategy",
@@ -192,7 +192,7 @@ const Pricing = () => {
               <h3 className="text-2xl font-display font-bold mb-2">{plan.name}</h3>
               <div className="mb-8">
                 <span className="text-4xl font-bold">Rs. {plan.price}</span>
-                <span className={`text-sm ${plan.popular ? 'text-blue-200' : 'text-navy/70'}`}> / month</span>
+                <span className={`text-sm ${plan.popular ? 'text-blue-200' : 'text-slate-400'}`}> / month</span>
               </div>
               <ul className="space-y-4 mb-10">
                 {plan.features.map((f, j) => (
@@ -257,7 +257,7 @@ const AboutUs = () => (
             </p>
             <div className="flex flex-wrap gap-2">
               {['Respiratory', 'Psychiatry', 'Medicine', 'Pediatrics', 'Surgery'].map(spec => (
-                <span key={spec} className="px-3 py-1 bg-navy/5 text-navy text-xs font-bold rounded-full border border-navy/10">
+                <span key={spec} className="px-3 py-1 bg-cyan/10 text-cyan text-xs font-bold rounded-full border border-cyan/20">
                   {spec}
                 </span>
               ))}
@@ -454,7 +454,7 @@ const Footer = () => (
           </ul>
         </div>
       </div>
-      <div className="pt-8 border-t border-white/5 text-center text-navy/70 text-sm">
+      <div className="pt-8 border-t border-white/5 text-center text-white/50 text-sm">
         <p>© {new Date().getFullYear()} Torrent Pharma Marketing Services. All rights reserved.</p>
       </div>
     </div>

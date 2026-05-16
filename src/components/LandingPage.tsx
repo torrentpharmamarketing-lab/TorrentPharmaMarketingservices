@@ -400,22 +400,22 @@ const Results = () => {
 };
 
 const Footer = () => (
-  <footer className="bg-navy text-white pt-20 pb-10">
+  <footer className="bg-white text-black pt-20 pb-10">
     <div className="max-w-7xl mx-auto px-4">
       <div className="grid md:grid-cols-4 gap-12 mb-16">
         <div className="col-span-2">
           <div className="mb-8">
-            <Logo size="md" className="text-white" />
+            <Logo size="md" className="text-black" />
           </div>
-          <p className="text-slate-400 max-w-sm mb-8">
+          <p className="text-black/70 max-w-sm mb-8">
             Torrent Pharma Marketing Services acts as your digital expansion partner, not just a marketer. We fill uncovered markets with the right people, faster and smarter.
           </p>
           <div className="space-y-3 mb-8">
-            <div className="flex items-start gap-3 text-slate-400">
+            <div className="flex items-start gap-3 text-black/70">
               <MapPin className="w-5 h-5 text-teal shrink-0 mt-1" />
               <span>Office 6 B, Royal Residencia, Darmangi Garden street 2, Warsak Road Peshawar</span>
             </div>
-            <div className="flex items-center gap-3 text-slate-400">
+            <div className="flex items-center gap-3 text-black/70">
               <PhoneCall className="w-5 h-5 text-teal" />
               <span>+92 306 5904574</span>
             </div>
@@ -425,7 +425,7 @@ const Footer = () => (
               href="https://www.facebook.com/Torrentpharmapakistan" 
               target="_blank" 
               rel="noopener noreferrer"
-              className="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center hover:bg-teal transition-colors"
+              className="w-10 h-10 rounded-full bg-black/5 flex items-center justify-center hover:bg-teal transition-colors"
             >
               <Facebook className="w-5 h-5" />
             </a>
@@ -433,7 +433,7 @@ const Footer = () => (
               href="https://www.instagram.com/torrentpharma.pk/" 
               target="_blank" 
               rel="noopener noreferrer"
-              className="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center hover:bg-teal transition-colors"
+              className="w-10 h-10 rounded-full bg-black/5 flex items-center justify-center hover:bg-teal transition-colors"
             >
               <Instagram className="w-5 h-5" />
             </a>
@@ -441,23 +441,23 @@ const Footer = () => (
         </div>
         <div>
           <h4 className="font-bold mb-6">Quick Links</h4>
-          <ul className="space-y-4 text-slate-400">
-            <li><a href="#services" className="hover:text-white transition-colors">Services</a></li>
+          <ul className="space-y-4 text-black/70">
+            <li><a href="#services" className="hover:text-black transition-colors">Services</a></li>
 
-            <li><a href="#pricing" className="hover:text-white transition-colors">Pricing</a></li>
-            <li><a href="#" className="hover:text-white transition-colors">Case Studies</a></li>
+            <li><a href="#pricing" className="hover:text-black transition-colors">Pricing</a></li>
+            <li><a href="#" className="hover:text-black transition-colors">Case Studies</a></li>
           </ul>
         </div>
         <div>
           <h4 className="font-bold mb-6">Opportunities</h4>
-          <ul className="space-y-4 text-slate-400">
-            <li><a href={WHATSAPP_LINK} className="hover:text-white transition-colors">For Companies</a></li>
-            <li><a href={WHATSAPP_LINK} className="hover:text-white transition-colors">For Franchisers</a></li>
-            <li><a href={WHATSAPP_LINK} className="hover:text-white transition-colors">Territory Expansion</a></li>
+          <ul className="space-y-4 text-black/70">
+            <li><a href={WHATSAPP_LINK} className="hover:text-black transition-colors">For Companies</a></li>
+            <li><a href={WHATSAPP_LINK} className="hover:text-black transition-colors">For Franchisers</a></li>
+            <li><a href={WHATSAPP_LINK} className="hover:text-black transition-colors">Territory Expansion</a></li>
           </ul>
         </div>
       </div>
-      <div className="pt-8 border-t border-white/5 text-center text-white/50 text-sm">
+      <div className="pt-8 border-t border-black/10 text-center text-black/60 text-sm">
         <p>© {new Date().getFullYear()} Torrent Pharma Marketing Services. All rights reserved.</p>
       </div>
     </div>

@@ -12,14 +12,14 @@ export const ParallaxScrollSection = () => {
             id: 1,
             title: "District Targeting",
             description: "Target specific cities like Lahore, Karachi, or Peshawar with precision. Reach the exact distributors you need in your target territories.",
-            imageUrl: 'https://images.unsplash.com/photo-1524661135-423995f22d0b?q=80&w=800&auto=format&fit=crop',
+            imageUrl: '/DistritctTargeting.png',
             reverse: false
         },
         {
             id: 2,
             title: "Verified Leads",
             description: "No more generic inquiries. Our system filters for high-intent manufacturers and entrepreneurs ready to invest in your franchise.",
-            imageUrl: 'https://images.unsplash.com/photo-1587854692152-cbe660dbbb88?q=80&w=800&auto=format&fit=crop',
+            imageUrl: '/verifiedleads.png',
             reverse: true
         },
         {

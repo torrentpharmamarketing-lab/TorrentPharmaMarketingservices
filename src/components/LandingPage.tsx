@@ -55,12 +55,21 @@ const UserPaths = () => (
             <li className="flex items-center gap-2 text-sm text-slate-300"><CheckCircle2 className="w-4 h-4 text-cyan" /> Verified business opportunities</li>
           </ul>
           <Button 
-            variant="solid"
-            className="inline-flex items-center gap-2 bg-cyan text-white px-6 py-3 rounded-xl font-bold hover:shadow-lg transition-all border-none"
-            onClick={() => window.open(WHATSAPP_LINK, '_blank')}
-          >
-            Find a Franchise <ArrowRight className="w-4 h-4" />
-          </Button>
+  variant="solid"
+  className="inline-flex items-center gap-2 bg-cyan text-white px-6 py-3 rounded-xl font-bold hover:shadow-lg transition-all border-none"
+  onClick={() => window.open(WHATSAPP_LINK, '_blank')}
+>
+  Find a Franchise <ArrowRight className="w-4 h-4" />
+</Button>
+
+{/* Drug Sale License Button */}
+<Button 
+  variant="solid"
+  className="inline-flex items-center gap-2 bg-teal/20 text-teal border border-teal/40 px-6 py-3 rounded-xl font-bold hover:bg-teal hover:text-white transition-all mt-3"
+  onClick={() => window.open('https://druglicensepk.vercel.app/pharma_license_sales_page.html', '_blank')}
+>
+  Get Drug Sale License <FileText className="w-4 h-4" />
+</Button>
         </motion.div>
       </div>
     </div>
@@ -442,11 +451,19 @@ const Footer = () => (
         <div>
           <h4 className="font-bold mb-6">Quick Links</h4>
           <ul className="space-y-4 text-black/70">
-            <li><a href="#services" className="hover:text-black transition-colors">Services</a></li>
-
-            <li><a href="#pricing" className="hover:text-black transition-colors">Pricing</a></li>
-            <li><a href="#" className="hover:text-black transition-colors">Case Studies</a></li>
-          </ul>
+  <li><a href="#services" className="hover:text-black transition-colors">Services</a></li>
+  <li><a href="#pricing" className="hover:text-black transition-colors">Pricing</a></li>
+  <li><a href="#" className="hover:text-black transition-colors">Case Studies</a></li>
+  <li>
+    <a 
+      href="YOUR_DRUG_LICENSE_PAGE_URL" 
+      target="_blank"
+      className="hover:text-black transition-colors font-bold text-teal"
+    >
+      💊 Drug Sale License
+    </a>
+  </li>
+</ul>
         </div>
         <div>
           <h4 className="font-bold mb-6">Opportunities</h4>

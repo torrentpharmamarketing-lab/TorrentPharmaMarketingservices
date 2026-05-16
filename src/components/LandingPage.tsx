@@ -247,8 +247,11 @@ const AboutUs = () => (
           </div>
 
           <div className="bg-card p-8 rounded-[32px] border border-white/5">
-            <h3 className="text-2xl font-display font-bold text-white mb-4">Founder’s Story</h3>
-            <p className="text-slate-200 font-bold mb-4">I’m Waqar Ali, the founder of Torrent Pharma Marketing Services.</p>
+            <h3 className="text-2xl font-display font-bold text-white mb-6">Founder’s Story</h3>
+            <div className="flex items-center gap-4 mb-6">
+              <img src="/founderimage.png.jpeg" alt="Waqar Ali" className="w-20 h-20 rounded-full object-cover border-2 border-cyan/30 shadow-lg shadow-cyan/10 shrink-0" />
+              <p className="text-slate-200 font-bold text-lg leading-snug">I’m Waqar Ali, the founder of Torrent Pharma Marketing Services.</p>
+            </div>
             <p className="text-slate-400 mb-4">
               With over 17 years of experience in the pharmaceutical industry and 6+ years in e-commerce and digital marketing, I’ve worked on both sides of the business — field sales and digital growth.
             </p>

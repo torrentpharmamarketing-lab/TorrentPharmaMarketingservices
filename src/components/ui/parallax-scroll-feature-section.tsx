@@ -37,9 +37,9 @@ export const ParallaxScrollSection = () => {
     // We can't call hooks inside a map easily if they return a value used in other hooks, 
     // so we'll do it individually or carefully.
     
-    const s1Progress = useScroll({ target: sectionRefs[0], offset: ["start end", "center start"] }).scrollYProgress;
-    const s2Progress = useScroll({ target: sectionRefs[1], offset: ["start end", "center start"] }).scrollYProgress;
-    const s3Progress = useScroll({ target: sectionRefs[2], offset: ["start end", "center start"] }).scrollYProgress;
+    const s1Progress = useScroll({ target: sectionRefs[0], offset: ["start 90%", "center 40%"] }).scrollYProgress;
+    const s2Progress = useScroll({ target: sectionRefs[1], offset: ["start 90%", "center 40%"] }).scrollYProgress;
+    const s3Progress = useScroll({ target: sectionRefs[2], offset: ["start 90%", "center 40%"] }).scrollYProgress;
 
     const progresses = [s1Progress, s2Progress, s3Progress];
 

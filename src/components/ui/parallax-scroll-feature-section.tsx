@@ -57,13 +57,13 @@ export const ParallaxScrollSection = () => {
     );
 
   return (
-    <div className="bg-white overflow-hidden">
+    <div className="bg-card overflow-hidden border-y border-white/5">
       <div className='min-h-[60vh] w-full flex flex-col items-center justify-center px-4'>
-        <h2 className='text-4xl md:text-6xl font-display font-bold text-navy text-center max-w-3xl'>
+        <h2 className='text-4xl md:text-6xl font-display font-bold text-white text-center max-w-3xl'>
           Why Choose Our <span className="text-teal">Expansion System?</span>
         </h2>
-        <p className='mt-12 flex items-center gap-1.5 text-sm font-bold text-navy/60 uppercase tracking-widest'>
-          Explore Features <ArrowDown size={15} className="animate-bounce" />
+        <p className='mt-12 flex items-center gap-1.5 text-sm font-bold text-slate-400 uppercase tracking-widest'>
+          Explore Features <ArrowDown size={15} className="animate-bounce text-teal" />
         </p>
       </div>
 
@@ -81,9 +81,9 @@ export const ParallaxScrollSection = () => {
                         style={{ y: translateContents[index], opacity: opacityContents[index] }}
                         className="flex-1 space-y-6"
                     >
-                        <div className="text-4xl md:text-6xl font-display font-bold text-navy">{section.title}</div>
+                        <div className="text-4xl md:text-6xl font-display font-bold text-white">{section.title}</div>
                         <motion.p 
-                            className="text-navy/70 text-lg md:text-xl max-w-md leading-relaxed"
+                            className="text-slate-400 text-lg md:text-xl max-w-md leading-relaxed"
                         >
                             {section.description}
                         </motion.p>
@@ -94,7 +94,7 @@ export const ParallaxScrollSection = () => {
                             opacity: opacityContents[index],
                             clipPath: clipProgresses[index],
                         }}
-                        className="flex-1 relative aspect-square w-full max-w-md overflow-hidden rounded-[40px] shadow-2xl shadow-navy/10"
+                        className="flex-1 relative aspect-square w-full max-w-md overflow-hidden rounded-[40px] shadow-2xl shadow-black/50 border border-white/10"
                     >
                         <img 
                             src={section.imageUrl} 

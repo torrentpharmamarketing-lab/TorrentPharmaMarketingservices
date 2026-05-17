@@ -1,7 +1,6 @@
 import { MessageCircle, CheckCircle2, TrendingUp, Users, MapPin, ArrowRight, BarChart3, PhoneCall, Zap, Info, FileText, Facebook, Instagram } from "lucide-react";
 import { motion } from "framer-motion";
 import { Logo } from "./Logo";
-import { CinematicHero } from "./ui/cinematic-hero";
 import { Button } from "@/components/ui/neon-button";
 import { AnimatedTestimonials } from "./blocks/animated-testimonials";
 import { ParallaxScrollSection } from "./ui/parallax-scroll-feature-section";
@@ -484,7 +483,6 @@ const Footer = () => (
 export default function LandingPage() {
   return (
     <div className="min-h-screen">
-      <CinematicHero />
       <UserPaths />
       <AboutUs />
       <Services />

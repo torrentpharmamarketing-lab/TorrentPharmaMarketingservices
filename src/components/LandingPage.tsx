@@ -46,7 +46,7 @@ const UserPaths = () => (
           <div className="absolute top-0 right-0 p-8 opacity-10 group-hover:opacity-20 transition-opacity">
             <Users size={120} />
           </div>
-          <h3 className="text-2xl font-display font-bold text-cyan mb-4">For Franchisers</h3>
+          <h3 className="text-2xl font-display font-bold text-cyan mb-4">For Franchisers/Promoters</h3>
           <p className="text-slate-300 mb-6">Entrepreneurs and Medical Store owners looking for high-margin pharma franchise opportunities in their city.</p>
           <ul className="space-y-3 mb-8">
             <li className="flex items-center gap-2 text-sm text-slate-300"><CheckCircle2 className="w-4 h-4 text-cyan" /> Connect with top manufacturers</li>

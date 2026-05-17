@@ -118,6 +118,14 @@ const INJECTED_STYLES = `
 
   .floating-ui-badge {
       background: linear-gradient(135deg, rgba(255, 255, 255, 0.08) 0%, rgba(255, 255, 255, 0.01) 100%);
+      box-shadow: 
+          0 0 0 1px rgba(255, 255, 255, 0.1),
+          0 15px 30px -8px rgba(0, 0, 0, 0.6),
+          inset 0 1px 1px rgba(255,255,255,0.1);
+  }
+  
+  @media (min-width: 768px) {
+    .floating-ui-badge {
       backdrop-filter: blur(24px); 
       -webkit-backdrop-filter: blur(24px);
       box-shadow: 
@@ -125,6 +133,7 @@ const INJECTED_STYLES = `
           0 25px 50px -12px rgba(0, 0, 0, 0.8),
           inset 0 1px 1px rgba(255,255,255,0.2),
           inset 0 -1px 1px rgba(0,0,0,0.5);
+    }
   }
 
   /* Physical Tactile Buttons */
@@ -237,10 +246,28 @@ export function CinematicHero({
     };
   },[]);
 
-  // 2. Complex Cinematic Scroll Timeline
+  // 2. Complex Cinematic Scroll Timeline – Optimized for Mobile
   useEffect(() => {
     const isMobile = window.innerWidth < 768;
 
+    // Skip complex animations on mobile for better performance
+    if (isMobile) {
+      // Simplified mobile animations
+      gsap.set(".text-track", { autoAlpha: 0, y: 30, scale: 0.9 });
+      gsap.set(".text-days", { autoAlpha: 1, clipPath: "inset(0 0% 0 0)" });
+      gsap.set(".main-card", { y: 0, autoAlpha: 1 });
+      gsap.set([".card-left-text", ".card-right-text", ".mockup-scroll-wrapper", ".floating-badge"], { autoAlpha: 1 });
+      gsap.set(".cta-wrapper", { autoAlpha: 1, scale: 1 });
+      
+      const introTl = gsap.timeline({ delay: 0.2 });
+      introTl
+        .to(".text-track", { duration: 0.8, autoAlpha: 1, y: 0, scale: 1, ease: "power1.out" })
+        .to(".text-days", { duration: 0.8, autoAlpha: 1, ease: "power1.out" }, "-=0.6");
+      
+      return;
+    }
+
+    // Desktop animations
     const ctx = gsap.context(() => {
       gsap.set(".text-track", { autoAlpha: 0, y: 60, scale: 0.85, filter: "blur(20px)", rotationX: -20 });
       gsap.set(".text-days", { autoAlpha: 1, clipPath: "inset(0 100% 0 0)" });
@@ -257,9 +284,9 @@ export function CinematicHero({
         scrollTrigger: {
           trigger: containerRef.current,
           start: "top top",
-          end: isMobile ? "+=3000" : "+=7000",
+          end: "+=7000",
           pin: true,
-          scrub: isMobile ? 0.5 : 1,
+          scrub: 1,
           anticipatePin: 1,
         },
       });
@@ -285,11 +312,10 @@ export function CinematicHero({
         .to([".mockup-scroll-wrapper", ".floating-badge", ".card-left-text", ".card-right-text"], {
           scale: 0.9, y: -40, z: -200, autoAlpha: 0, ease: "power3.in", duration: 1.2, stagger: 0.05,
         })
-        // Responsive card pullback sizing
         .to(".main-card", { 
-          width: isMobile ? "92vw" : "85vw", 
-          height: isMobile ? "92vh" : "85vh", 
-          borderRadius: isMobile ? "32px" : "40px", 
+          width: "85vw", 
+          height: "85vh", 
+          borderRadius: "40px", 
           ease: "expo.inOut", 
           duration: 1.8 
         }, "pullback") 
